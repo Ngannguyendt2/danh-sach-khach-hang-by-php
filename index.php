@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table border="1">
+    <h2>Danh sach khach hang</h2>
+    <tr>
+        <td>Tên</td>
+        <td>Ngày sinh</td>
+        <td>Địa chỉ</td>
+        <td>Ảnh</td>
+    </tr>
+    <?php
+    $arraylist = array(
+        "1" => array("ten" => "Mai Van Hoan",
+            "ngaysinh" => "1983-08-20",
+            "diachi" => "Ha Noi",
+            "anh" => "image/1.jpeg"),
+        "2" => array("ten" => "Tran Dang Khoa",
+            "ngaysinh" => "1983=08-23",
+            "diachi" => "Quang Binh",
+            "anh" => "image/2.jpeg"),
+        "3" => array("ten" => "Hoang Quoc Viet",
+            "ngaysinh" => "1978-08-22",
+            "diachi" => "Quang Nam",
+            "anh" => "image/3.jpeg")
+    );
+    foreach ($arraylist as $key => $value):
+        ?>
+        <tr>
+            <td><?php echo $value['ten'] ?></td>
+            <td><?php echo $value['ngaysinh'] ?></td>
+            <td><?php echo $value['diachi'] ?></td>
+            <td><?php echo "<image src='" . $value['anh'] . "'width='50px' height='100px' " ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+</body>
+</html>
+
